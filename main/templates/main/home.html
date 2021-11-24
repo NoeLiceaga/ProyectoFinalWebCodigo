@@ -1,0 +1,55 @@
+{% extends 'main/base.html' %}{% load static %} {% block title %}
+<link rel="stylesheet" href="{% static 'css/body.css' %}" />
+<link rel="stylesheet" href="{% static 'css/logged.css' %}" />
+{% endblock title %} {% block contenido %}
+
+<div class="busqueda">
+  <div class="titulos">
+    <h1>La Carrera que Deseas Esta a Tu Alcance</h1>
+    <h2>La Busqueda De Tu Empleo Termina Aquí</h2>
+  </div>
+  <div class="formularios_padre">
+    <div class="formularios">
+      <form action="" method="get">
+        <div class="f_palabras_clave">
+          <input
+            type="text"
+            name="palabra"
+            id=""
+            placeholder="Palabra"
+            class="txt_input"
+          />
+        </div>
+        <div class="f_empresa">
+          <select name="empresa" id="empresa"></select>
+        </div>
+        <div class="f_categoria">
+          <select name="categoria" id="categoria">
+            {% for x in ct %}
+            <option>{{x.nombre}}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="f_envia">
+          <input type="submit" value="Busca" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="categorias">
+  <div class="titulos">
+    <h1>CATEGORIAS DE TRABAJO</h1>
+    <h3>Estas son todas las categorias</h3>
+  </div>
+  <div class="categoriastotales" id="categoria_total"></div>
+</div>
+<div class="solicitantes">
+  <div class="titulos">
+    <h1>NOS CUENTAN SU EXPERIENCIA</h1>
+    <h3>Que es lo que otras personas piensan acerca de nuestro servicio</h3>
+  </div>
+  <div class="solictante_info" id="solictante_info"></div>
+</div>
+<script src="{% static 'js/bodyIndex.js' %}"></script>
+{% endblock contenido %}

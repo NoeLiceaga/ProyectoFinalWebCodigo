@@ -1,0 +1,119 @@
+{% extends 'main/base.html' %} {% load static %} {% block title %}
+<link rel="stylesheet" href="{% static 'css/cvform.css' %}" />
+{% endblock title %} {% block contenido %}
+
+<div class="contenedor">
+  <div class="titulo_fondo">
+    <h1>CV</h1>
+  </div>
+  <div class="contendor_form">
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class="contenedor_datos_form">
+        <div class="izquierdo">
+          <div class="nombres">
+            <div class="contenido_izquierdo">
+              {{form.id_usuario.errors}} {{form.id_usuario.label_tag}}
+              {{form.id_usuario}}
+            </div>
+            <div class="contenido_derecho">
+              <label for="">Apellidos: </label>
+              <input
+                type="text"
+                name=""
+                id="apellidos"
+                value="{{x.id_usuario.last_name}}"
+                placeholder="{{x.id_usuario.las_name}}"
+                disabled
+              />
+            </div>
+          </div>
+
+          <div class="genero">
+            <div class="contenido_izquierdo">
+              {{form.sexo.errors}} {{form.sexo.label_tag}} {{form.sexo}}
+            </div>
+            <div class="contenido_derecho">
+              {{form.profesion.errors}}{{form.profesion.label_tag}}{{form.profesion}}
+            </div>
+          </div>
+          <div class="contenido_foto">
+            {{form.foto.errors}}{{form.foto.label_tag}}{{form.foto}}
+          </div>
+          <div class="universidad">
+            <div class="universidad_nombre">
+              {{form.universidad_nombre.errors}}{{form.universidad_nombre.label_tag}}{{form.universidad_nombre}}
+            </div>
+            <div class="grado_obtenido">
+              {{form.grado.errors}}{{form.grado.label_tag}}{{form.grado}}
+            </div>
+            <div class="fechas">
+              <div class="fechas_inicio">
+                {{form.universidad_inicio.errors}}{{form.universidad_inicio.label_tag}}{{form.universidad_inicio}}
+              </div>
+              <div class="fechas_fin">
+                {{form.universidad_fin.errors}}{{form.universidad_fin.label_tag}}{{form.universidad_fin}}
+              </div>
+            </div>
+          </div>
+          <div class="universidad">
+            <div class="universidad_nombre">
+              {{form.bachiller_nombre.errors}}{{form.bachiller_nombre.label_tag}}{{form.bachiller_nombre}}
+            </div>
+            <div class="fechas">
+              <div class="fechas_inicio">
+                {{form.bachiller_inicio.errors}}{{form.bachiller_inicio.label_tag}}{{form.bachiller_inicio}}
+              </div>
+              <div class="fechas_fin">
+                {{form.bachiller_fin.errors}}{{form.bachiller_fin.label_tag}}{{form.bachiller_fin}}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="derecho">
+          <div class="empleo1">
+            <div class="empleo_nombre">
+              {{form.empleo_anterior_empresa.errors}}{{form.empleo_anterior_empresa.label_tag}}{{form.empleo_anterior_empresa}}
+            </div>
+            <div class="puesto_obtenido">
+              {{form.empleo_anterior_puesto.errors}}{{form.empleo_anterior_puesto.label_tag}}{{form.empleo_anterior_puesto}}
+            </div>
+            <div class="fechas">
+              <div class="fechas_inicio">
+                {{form.empleo_anterior_inicio.errors}}{{form.empleo_anterior_inicio.label_tag}}{{form.empleo_anterior_inicio}}
+              </div>
+              <div class="fechas_fin">
+                {{form.empleo_anterior_fin.errors}}{{form.empleo_anterior_fin.label_tag}}{{form.empleo_anterior_fin}}
+              </div>
+            </div>
+          </div>
+          <div class="empleo2">
+            <div class="empleo_nombre">
+              {{form.empleo_anterior2_empresa.errors}}{{form.empleo_anterior2_empresa.label_tag}}{{form.empleo_anterior2_empresa}}
+            </div>
+            <div class="puesto_obtenido">
+              {{form.empleo_anterior2_puesto.errors}}{{form.empleo_anterior2_puesto.label_tag}}{{form.empleo_anterior2_puesto}}
+            </div>
+            <div class="fechas">
+              <div class="fechas_inicio">
+                {{form.empleo_anterior2_inicio.errors}}{{form.empleo_anterior2_inicio.label_tag}}{{form.empleo_anterior2_inicio}}
+              </div>
+              <div class="fechas_fin">
+                {{form.empleo_anterior2_fin.errors}}{{form.empleo_anterior2_fin.label_tag}}{{form.empleo_anterior2_fin}}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="descripcion">
+          {{form.idioma_extra.errors}}{{form.idioma_extra.label_tag}}{{form.idioma_extra}}
+          {{form.idoma_porcentaje.errors}}{{form.idoma_porcentaje.label_tag}}{{form.idoma_porcentaje}}
+          {{form.descripcion.errors}}{{form.descripcion.label_tag}}{{form.descripcion}}
+        </div>
+      </div>
+      <div class="boton">
+        <input type="submit" value="guardar" name="guardar" />
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock contenido %}

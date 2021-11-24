@@ -1,0 +1,60 @@
+{% extends 'main/base.html' %} {% load static %} {% block title %}
+<link rel="stylesheet" href="{% static 'css/consultatrabajos.css' %}" />
+{% endblock title%} {% block contenido %}
+<div class="contenedor">
+  <div class="titulo_fondo">
+    <h1>Consulta de Trabajos</h1>
+  </div>
+  <div class="formulario">
+    <form method="get">{{form}}
+    <input type="submit" name="enviar" value="enviar" id="f"/>
+    </form>
+  </div>
+  <div class="contenidos">
+    {% for x in ofertas %}
+    <div class="individual">
+      <div class="logo">
+        <img src="{{x.empresa.logo.url}}" />
+      </div>
+      <div class="datos">
+        <div class="titulo">
+          <h1>{{x.titulo}}</h1>
+        </div>
+        <div class="datos_datos">
+          <h2>Categoria:</h2>
+          <h4>{{x.categoria}}</h4>
+        </div>
+        <div class="datos_empresa">
+            <h1>Empresa: {{x.empresa.nombre}}<h1>
+        </div>
+      </div>
+      <div class="tiempo">
+        <i class='bx bx-pie-chart'></i>
+        <h3>{{x.tipo}}<h3>
+      </div>
+      <div class="lonks">
+        <div class="lonks_a"><a href={% url 'detalleoferta' x.id %}>Detalles</a></div>
+        {% if user.is_authenticated %}
+            <div class="lonks_a"><a href={% url 'agregapostulante' x.id %}>Postularte</a></div>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+    <div class="page_navigation">
+    {% if ofertas.has_previous %}
+    <div class="page_nav">
+      <div>
+        <a href="?page={{ofertas.previous_page_number}}">Anterior</a>
+      </div>
+    </div>
+    {% endif %} {% if ofertas.has_next %}
+    <div class="page_nav">
+      <div>
+        <a href="?page={{ofertas.next_page_number}}">Siguiente</a>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock contenido %}

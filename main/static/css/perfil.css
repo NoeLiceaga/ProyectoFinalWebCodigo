@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,400;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,500;1,400;1,900&display=swap');
+:root{
+    --primary-color:#f09d02;
+    --secondary-color:#375e97;
+    --terceary-color:#f80657;
+    --font-primary-color: black;
+    --font-secondary-color: white;
+    --body-font: 'Poppins', sans-serif;
+    --background-color: #373a68 ;
+}
+.contenedor{
+    margin-top: 80px;
+    height: 740px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: var(--body-font);
+    text-align: center;
+}
+
+.titulo_fondo{
+    width: 100%;
+    background-image: url('http://prograweb2upslp.online/bg-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 70% 0;
+    height: 150px;
+    display: flex;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    color:  var(--font-secondary-color);
+    font-family: var(--body-font);
+}
+.avatar_container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 30%;
+    text-align: center;
+}
+.avatar_container h1{
+    width: 100%;
+    font-size: 1.5rem;
+}
+.avatar_container img{
+    width: 400px;
+    height: 300px;
+}
+form{
+    width: 50%;
+    border: solid 1px rgb(89, 238, 20);
+    padding: 20px;
+}
+form input[type="text"],select,input[type="number"]{
+    width: 100%;
+    height: 30px;
+}
+#id_email{
+    width: 100%;
+    height: 30px;
+}
+form label{
+    font-size: 1.3rem;
+}
+form input[type="submit"]{
+    border: none;
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    background-color: #31af36;
+    font-family: var(--body-font);
+    transition: all ease 0.6s;
+}
+form input[type="submit"]:hover{
+    background-color: #3ccc41;
+    transform: scale(0.9);
+    transition: all ease 0.6s;
+    color: var(--font-secondary-color);
+}

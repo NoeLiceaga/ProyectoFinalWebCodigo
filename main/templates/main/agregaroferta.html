@@ -1,0 +1,47 @@
+{% extends 'main/base.html' %} {% load static %}{% block title %}
+<link rel="stylesheet" href="{% static 'css/ofertas.css' %}" />
+{% endblock title %} {% block contenido %}
+<div class="contenedor">
+{% if r %}
+  <div class="titulo_fondo">
+    <h1>Agrega Oferta de Empleo</h1>
+  </div>
+  <form method="post" id="form">
+    {% csrf_token %} 
+    {{form.as_p}} 
+    <input type="submit" name="enviar" value="enviar" onclick="showNotificacion()"/>
+  </form>
+  <div class="avatar_container">
+    <img
+      class="avatar"
+      src="{% static 'images/logo.png' %}"
+      alt="Opportunities Link"
+    />
+    <h1>LOGIN OPPORTUNITIES LINK</h1>
+  </div>
+{% else %}
+  {% if a %}
+    <div class="titulo_fondo">
+    <h1>Agrega Oferta de Empleo</h1>
+  </div>
+  <form method="post" id="form">
+    {% csrf_token %} 
+    {{form.as_p}} 
+    <input type="submit" name="enviar" value="enviar" onclick="showNotificacion()"/>
+  </form>
+  <div class="avatar_container">
+    <img
+      class="avatar"
+      src="{% static 'images/logo.png' %}"
+      alt="Opportunities Link"
+    />
+    <h1>LOGIN OPPORTUNITIES LINK</h1>
+  </div>
+    {% else %}
+    <h1>NO TIENES PERMISO PARA ACCEDER A ESTA PAGINA</h1>
+  {% endif %}
+{% endif %}
+
+</div>
+<script src={% static 'js/notificacion.js' %}></script>
+{% endblock contenido %}

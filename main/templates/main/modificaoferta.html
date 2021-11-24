@@ -1,0 +1,44 @@
+{% extends 'main/base.html' %} {% load static %} {% block title %}
+<link rel="stylesheet" href="{% static 'css/ofertas.css' %}" />
+{% endblock title %} {% block contenido %} {% if a %}
+<div class="contenedor2">
+  <div class="titulo_fondo">
+    <h1>Modifica Empresa</h1>
+  </div>
+  <form method="post" enctype="multipart/form-data" id="form">
+    {% csrf_token %} {{form.as_p}}
+    <input type="submit" name="enviar" value="enviar" />
+  </form>
+  <div class="avatar_container">
+    <img
+      class="avatar"
+      src="{% static 'images/logo.png' %}"
+      alt="Opportunities Link"
+    />
+    <h1>LOGIN OPPORTUNITIES LINK</h1>
+  </div>
+</div>
+
+{% else %} {% if r %}
+<div class="contenedor">
+  <div class="titulo_fondo">
+    <h1>Modifica Empresa</h1>
+  </div>
+  <form method="post" enctype="multipart/form-data" id="form">
+    {% csrf_token %} {{form.as_p}}
+    <input type="submit" name="enviar" value="enviar" />
+  </form>
+  <div class="avatar_container">
+    <img
+      class="avatar"
+      src="{% static 'images/logo.png' %}"
+      alt="Opportunities Link"
+    />
+    <h1>LOGIN OPPORTUNITIES LINK</h1>
+  </div>
+</div>
+{% else %}
+<div class="contenedor2">
+  <h1>NO TIENES PERMISO PARA VER ESTA PAGINA</h1>
+</div>
+{% endif %} {% endif %} {% endblock contenido %}

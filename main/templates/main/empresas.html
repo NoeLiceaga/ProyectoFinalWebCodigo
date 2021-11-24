@@ -1,0 +1,38 @@
+{% extends 'main/base.html' %} {% block title %} {% load static %}
+<link rel="stylesheet" href="{% static 'css/footer2.css' %}" />
+<link rel="stylesheet" href="{% static 'css/empresaconsulta.css' %}" />
+{% endblock title %} {% block contenido %}
+<div class="contenedor">
+  <div class="titulo_fondo">
+    <h1>CONSULTA DE EMPRESAS</h1>
+  </div>
+  <div class="contenedor_body">
+    {% for x in empresa %}
+    <div class="contenedor_individual">
+      <div class="individual_logo"><img src="{{x.logo.url}}" /></div>
+      <div class="individual_datos">
+        <h1>{{x.nombre}}</h1>
+      </div>
+      <div class="form">
+        <a href="{{x.id}}">Detalles</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="page_navigation">
+    {% if empresa.has_previous %}
+    <div class="page_nav">
+      <div>
+        <a href="?page={{empresa.previous_page_number}}">Anterior</a>
+      </div>
+    </div>
+    {% endif %} {% if empresa.has_next %}
+    <div class="page_nav">
+      <div>
+        <a href="?page={{empresa.next_page_number}}">Siguiente</a>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock contenido %}

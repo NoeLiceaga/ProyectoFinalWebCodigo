@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %} {% load static %} {% block title %}
+<link rel="stylesheet" href="{% static 'css/ofertas.css' %}" />
+{% endblock title %} {% block contenido %}
+<div class="contenedor2">
+  <div class="titulo_fondo">
+    <h1>Agregar Empresa</h1>
+  </div>
+
+  <form method="post" enctype="multipart/form-data" id="form">
+    <h6>Se recomienda subir imagen de tamaño 1080x1080</h6>
+    {% csrf_token %} {{form.as_p}}
+    <input type="submit" name="enviar" value="enviar" />
+  </form>
+  <div class="avatar_container">
+    <img
+      class="avatar"
+      src="{% static 'images/logo.png' %}"
+      alt="Opportunities Link"
+    />
+    <h1>LOGIN OPPORTUNITIES LINK</h1>
+  </div>
+</div>
+{% endblock contenido %}

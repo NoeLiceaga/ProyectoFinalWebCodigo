@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,400;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,500;1,400;1,900&display=swap');
+:root{
+    --primary-color:#f09d02;
+    --secondary-color:#375e97;
+    --terceary-color:#f80657;
+    --font-primary-color: black;
+    --font-secondary-color: white;
+    --body-font: 'Poppins', sans-serif;
+    --background-color: #373a68 ;
+}
+
+.footer{
+    display: flex !important;
+    flex-wrap: wrap !important;
+    background-color: var(--primary-color) !important;
+    text-align: center !important;
+    font-family: var(--body-font) !important;
+    color: var(--font-secondary-color) !important;
+    justify-content: space-around !important;
+    font-size: 10px;
+}
+.footer h4{
+    color: white !important;
+    font-weight: 300 !important;
+}
+.footer-logo{
+    color: var(--font-secondary-color) !important;
+    font-size: 10px !important;
+    text-align: center !important;
+}
+.footer-logo a img{
+    height: 120px !important;
+    margin-bottom: 10px !important;
+}
+.footer-container{
+    display: flex !important;
+    width: 80% !important;
+    margin: 0 80px !important;
+    letter-spacing: 1px !important;
+    align-items: center !important;
+    justify-content: space-evenly !important;
+}
+.footer-top{
+    width: 100% !important;
+    display: flex !important;
+    padding: 30px 0 !important;
+    cursor: pointer !important;
+}
+
+.footer-datos h6{
+    font-weight:lighter !important;
+    transition: all ease 0.6s !important;
+}
+.footer-datos h6:hover{
+    transition: all ease 0.6s !important;
+    padding-left: 10px !important;
+}
+.footer-datos h3,h1{
+    font-weight: 400 !important;
+}
+
+.footer-datos{
+    text-align: left !important;
+    margin:0 40px !important;
+}
+.footer-links{
+    text-align: left !important;
+    width: 30% !important;
+}
+.footer-links ul {
+    position: relative !important;
+    margin: 0 !important;
+}
+.footer-links ul li{
+    position: relative !important;
+    list-style: none !important;
+    padding: 3px !important;
+}
+.footer-links ul li a{
+    position: relative !important;
+    text-decoration: none !important;
+    color: var(--font-secondary-color) !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    transition: all ease 0.4s !important;
+}
+.footer-links ul li a:hover{
+    transition: all ease 0.4s !important;
+    padding-left: 8px !important;
+}
+.footer-bottom{
+    background-color:var(--terceary-color) !important;
+    width: 100% !important;
+}
+.footer-contact{
+    text-align: left !important;
+}
+.footer-contact a{
+    font-weight: 400 !important;
+    font-size: 15px !important;
+    color: var(--font-secondary-color) !important;
+    transition: all ease 0.4s !important;
+}
+.footer-contact a:hover{
+    font-weight: 400 !important;
+    transition: all ease 0.4s !important;
+    padding-left: 8px !important;
+}

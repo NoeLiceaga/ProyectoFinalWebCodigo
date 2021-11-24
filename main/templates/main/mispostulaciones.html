@@ -1,0 +1,69 @@
+{% extends 'main/base.html' %} {% load static %} {% block title %}
+<link rel="stylesheet" href="{% static 'css/mispostulaciones.css' %}" />
+{% endblock title%} {% block contenido %}
+{% if user.is_authenticated %}
+<div class="contenedor">
+  <div class="titulo_fondo">
+    <h1>Mis Postulaciones</h1>
+  </div>
+  <div class="contenidos">
+    {% for x in postulantes %}
+    <div class="individual">
+      <div class="logo_empresa"><img src="{{x.oferta.empresa.logo.url}}" /></div>
+      <div class="datos_propuesta">
+        <div class="nombre_empresa"><h1>{{x.oferta.empresa.nombre}}</h1></div>
+        <div class="datos_oferta">
+            <h3>Puesto: {{x.oferta.titulo}}<h3>
+            <h3>Salario: ${{x.oferta.salario_minimo}}-${{x.oferta.salario_maximo}}</h3>
+        </div> 
+      </div>
+      <div class="datos_user">
+        <div class="datos_user_nombres">
+            <h2>Postulante:</h2>
+            <h3>{{x.usuario.first_name}} {{x.usuario.last_name}}</h3>
+        </div>
+        <div class="postulante_cv">
+            <a href={% url 'detalleCv' x.usuario.id %}>CV</a>
+        </div> 
+      </div>
+        {% if x.estado.nombre == 'RECHAZADO'%}
+        <div class="estados">
+            <div class="lonks_a"  id="no">Estado: {{x.estado.nombre}}</a></div>
+        </div>    
+        {% endif %}
+        {% if x.estado.nombre == 'ACEPTADO'%}
+          <div class="estados">
+              <div class="lonks_a"  id="si">Estado: {{x.estado.nombre}}</a></div>
+          </div>    
+        {% endif %}
+        {% if x.estado.nombre == 'EN PROCESO'%}
+          <div class="estados">
+              <div class="lonks_a"  id="nose">Estado: {{x.estado.nombre}}</a></div>
+          </div>    
+        {% endif %}
+        </div>
+    {% endfor %}
+  </div>
+    <div class="page_navigation">
+    {% if postulantes.has_previous %}
+    <div class="page_nav">
+      <div>
+        <a href="?page={{postulantes.previous_page_number}}">Anterior</a>
+      </div>
+    </div>
+    {% endif %} {% if postulantes.has_next %}
+    <div class="page_nav">
+      <div>
+        <a href="?page={{postulantes.next_page_number}}">Siguiente</a>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% else %}
+<div class="contenedor">
+<h1>Inicia Sesion Para Acceder a esta pagina</h1>
+<div>
+{% endif %}
+
+{% endblock contenido %}

@@ -1,0 +1,40 @@
+{% extends 'main/base.html' %}{% load static %} {% block title %}
+<link rel="stylesheet" href="{% static 'css/empresadetalle.css' %}" />
+{% endblock title %} {% block contenido %}
+<div class="contenedor">
+  <div class="titulo_fondo">
+    <h1>Detalle Empresa</h1>
+  </div>
+  <div class="datos">
+    <div class="dato_titulo">
+      <h1 id="et">{{empresa.nombre}}</h1>
+    </div>
+    <div class="datos_contenido">
+      <div class="contenido_imagen">
+        <img src="{{empresa.logo.url}}" />
+      </div>
+      <div class="datos_datos">
+        <h1>Dirección</h1>
+        <h3>{{empresa.direccion}}</h3>
+        <h1>Telefono</h1>
+        <h3>{{empresa.telefono}}</h3>
+        <h1>Bussiness</h1>
+        <h3>{{empresa.categoria_principal}}</h3>
+        <h2 id="pa">Cantdad de Propuestas Activas: {{propuesta}}</h2>
+      </div>
+      <div class="descripcion">
+        <h1>Descripción</h1>
+        <p>{{empresa.descripcion}}</p>
+      </div>
+      {% if a %}
+      <div class="lonks">
+        <a href="{% url 'modificaempresa' empresa.id %}">Modificar</a>
+        <a href="{% url 'eliminarempresa' empresa.id %}" id="eliminar"
+          >Eliminar</a
+        >
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock contenido %}

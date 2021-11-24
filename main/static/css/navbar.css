@@ -1,0 +1,106 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,400;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,500;1,400;1,900&display=swap');
+:root{
+    --primary-color:#f09d02;
+    --secondary-color:#375e97;
+    --font-primary-color: black;
+    --font-secondary-color: white;
+    --body-font: 'Poppins', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+
+}
+.navbar{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    padding: 40px 50px;
+    top: 0;
+    left: 0;
+    font-family: var(--body-font);
+    transition: all 0.8s ease;
+    justify-content:space-evenly;
+    z-index: 10000;
+}
+.navbar .logo{
+    position: relative;
+    font-weight: 700;
+    color: var(--font-primary-color);
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+
+.navbar ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.navbar ul li{
+    position: relative;
+    list-style: none;
+    cursor: pointer;
+}
+.navbar ul li a{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: var(--font-primary-color);
+    letter-spacing: 2px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.navbar ul li :hover{
+    transition: all 0.6s ease;
+    background-size: 100% 2px;
+}
+.navbar .logo a{
+    color:var(--font-primary-color);
+    font-size: 25px;
+    font-weight: 600;
+}
+.navbar .menu i{
+    width: 50px;
+    height: 20px;
+    display: inline-block;
+    color: var(--font-primary-color);
+}
+
+.permiso{
+    display: flex;
+    color: var(--font-primary-color);
+    align-items:center;
+    justify-content: flex-start;
+}
+.login a i,
+.register a i{
+    font-size: 18px;
+    color:var(--font-primary-color);
+}
+.login a,
+.register a{
+    align-items: center;
+    color: var(--font-primary-color);
+}
+.sticky{
+    background-color: var(--primary-color);
+}
+a {
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .1s;
+}
+
+a:hover, a:focus {
+    background-size: 100% 2px;
+}

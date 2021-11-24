@@ -1,0 +1,99 @@
+
+
+
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--primary-color);
+    text-align: center;
+    font-family: var(--body-font);
+    color: var(--font-secondary-color);
+    justify-content: space-around;
+}
+.footer h4{
+    color: white;
+    font-weight: 300;
+}
+.footer-logo{
+    color: var(--font-secondary-color);
+    font-size: 10px;
+    text-align: center;
+}
+.footer-logo a img{
+    height: 120px;
+    margin-bottom: 10px;
+}
+.footer-container{
+    display: flex;
+    width: 80%;
+    margin: 0 80px;
+    letter-spacing: 1px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.footer-top{
+    width: 100%;
+    display: flex;
+    padding: 30px 0;
+    cursor: pointer;
+}
+
+.footer-datos h5{
+    font-weight:lighter;
+    transition: all ease 0.6s;
+}
+.footer-datos h5:hover{
+    transition: all ease 0.6s;
+    padding-left: 10px;
+}
+.footer-datos h3,h1{
+    font-weight: 400;
+}
+
+.footer-datos{
+    text-align: left;
+    margin:0 40px;
+}
+.footer-links{
+    text-align: left;
+    width: 30%;
+}
+.footer-links ul {
+    position: relative;
+    margin: 0;
+}
+.footer-links ul li{
+    position: relative;
+    list-style: none;
+    padding: 3px;
+}
+.footer-links ul li a{
+    position: relative;
+    text-decoration: none;
+    color: var(--font-secondary-color);
+    font-size: 15px;
+    font-weight: 500;
+    transition: all ease 0.4s;
+}
+.footer-links ul li a:hover{
+    transition: all ease 0.4s;
+    padding-left: 8px;
+}
+.footer-bottom{
+    background-color:var(--terceary-color);
+    width: 100%;
+}
+.footer-contact{
+    text-align: left;
+}
+.footer-contact a{
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--font-secondary-color);
+    transition: all ease 0.4s;
+}
+.footer-contact a:hover{
+    font-weight: 400;
+    transition: all ease 0.4s;
+    padding-left: 8px;
+}

@@ -1,0 +1,83 @@
+{% extends 'main/base.html' %} {% load static %} {% block title %}
+<link rel="stylesheet" href="{% static 'css/detallecv.css' %}" />
+{% endblock title %} {% block contenido %}
+<div class="contenedor">
+  {% if user.is_authenticated %} {% if s %}
+  <h1>No tienes los permisos suficientes</h1>
+  {% else %}
+  <div class="titulo_fondo">
+    <h1>Detalle Cv</h1>
+  </div>
+  <div class="contenidos">
+    <div class="persona_foto">
+      <div class="foto_borde">
+        <div class="foto">
+          <img src="{{cv.foto.url}}" />
+        </div>
+      </div>
+      <div class="nombre">
+        <h2>{{cv.id_usuario.first_name}} {{cv.id_usuario.last_name}}</h2>
+      </div>
+      <div class="profesion">
+        <i class="bx bx-expand-alt"></i>
+        <h4>{{cv.profesion}}</h4>
+        <i class="bx bx-expand-alt"></i>
+      </div>
+    </div>
+    <div class="descripcion">
+      <h1>ACERCA DEL CANDIDATO</h1>
+      <div class="descripcion_descripcion">
+        <p>{{cv.descripcion}}</p>
+      </div>
+      <h1>Genero: {{cv.sexo}}</h1>
+      <h1>Idioma Extra: {{cv.idioma_extra}}</h1>
+    </div>
+    <div class="educacion">
+      <div class="titulo_educacion">
+        <h1>EDUCACION:</h1>
+      </div>
+      <div class="universidad">
+        <div class="educacion_logo">
+          <img
+            src="https://img.icons8.com/emoji/48/000000/graduation-cap-emoji.png"
+          />
+          <h2>Universidad</h2>
+        </div>
+        <h1>{{cv.universidad_nombre}}</h1>
+        <h2>Grado Obtenido: {{cv.grado}}</h2>
+        <h3>Periodo: {{cv.universidad_inicio}} - {{cv.universidad_fin}}</h3>
+      </div>
+      <div class="preparatoria">
+        <div class="educacion_logo">
+          <img
+            src="https://img.icons8.com/emoji/48/000000/graduation-cap-emoji.png"
+          />
+          <h2>Bachiller</h2>
+        </div>
+
+        <h1>{{cv.bachiller_nombre}}</h1>
+        <h2>Curso:Completo</h2>
+        <h3>Periodo: {{cv.bachiller_inicio}} - {{cv.bachiller_fin}}</h3>
+      </div>
+    </div>
+    <div class="trabajo">
+      <div class="trabajo_titulo">
+        <h1>Trabajo y Experiencia</h1>
+      </div>
+      <div class="trabajo_uno">
+        <h1>{{cv.empleo_anterior_empresa}}</h1>
+        <h2>Puesto: {{cv.empleo_anterior_puesto}}<h2>
+        <h3>Periodo: {{cv.empleo_anterior_inicio}} - {{cv.empleo_anterior_fin}}</h3> 
+      </div>
+      <div class="trabajo_dos">
+        <h1>{{cv.empleo_anterior2_empresa}}</h1>
+        <h2>Puesto: {{cv.empleo_anterior2_puesto}}<h2>
+        <h3>Periodo: {{cv.empleo_anterior2_inicio}} - {{cv.empleo_anterior_fin}}</h3> 
+      </div>
+    </div>
+  </div>
+  {% endif %} {% else %}
+  <h1>Inicia Sesion para acceder</h1>
+  {% endif %}
+</div>
+{% endblock contenido %}

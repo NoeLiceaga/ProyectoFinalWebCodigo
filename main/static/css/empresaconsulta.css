@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,400;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,500;1,400;1,900&display=swap');
+:root{
+    --primary-color:#f09d02;
+    --secondary-color:#375e97;
+    --terceary-color:#f80657;
+    --font-primary-color: black;
+    --font-secondary-color: white;
+    --body-font: 'Poppins', sans-serif;
+    --background-color: #373a68 ;
+}
+.contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 130px;
+}
+.contenedor .contenedor_body{
+    margin-top: 150px;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: var(--body-font);
+    margin-bottom: 100px;
+}
+.contenedor_individual{
+    width: 30%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ededed transparent;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+}
+.titulo_fondo{
+    width: 100%;
+    background-image: url('http://prograweb2upslp.online/bg-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 70% 0;
+    height: 150px;
+    display: flex;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    color:  var(--font-secondary-color);
+    font-family: var(--body-font);
+}
+.contenedor_individual .individual_logo img{
+    width: 200px;
+    border-radius: 50%;
+    margin: 10px;
+    box-shadow: 2px 2px 5px 11px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 2px 2px 5px 11px rgba(0,0,0,0.25);
+    -moz-box-shadow: 2px 2px 5px 11px rgba(0,0,0,0.25);
+}
+.individual_logo{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 15px;
+}
+.individual_datos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+.individual_datos h1{
+    width: 100%;
+}
+.individual_datos .form{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.individual_datos .form  a{
+    background-color: #31af36;;
+    font-family: var(--body-font);
+    font-size: 15px;
+    border: none;
+    width: 80%;
+    padding: 10px;
+    margin: 30px 0px;
+    color: var(--font-primary-color);
+}
+.individual_datos a:hover{
+    background-color: #37c53b;
+}
+.page_navigation{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 30px;
+    margin-top: -80px;
+}
+.page_nav{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    background-color: white;
+    height: 100%;
+    width: 15%;
+    font-family: var(--body-font);
+    font-size: 30px;
+    background-color:rgb(248, 206, 66);
+    color: white;
+}
+.page_nav a{
+    text-decoration: none;
+    color: var(--font-secondary-color);
+}
+.form{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+.form a{
+    color: white !important;
+    background: #31af36 !important;
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}

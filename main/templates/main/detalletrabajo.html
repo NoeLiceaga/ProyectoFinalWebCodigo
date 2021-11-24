@@ -1,0 +1,69 @@
+{% extends 'main/base.html' %} {% load static %} {% block title %}
+<link rel="stylesheet" href="{% static 'css/detalletrabajo.css' %}" />
+{% endblock title %} {% block contenido %}
+<div class="contenedor">
+  <div class="titulo_fondo">
+    <h1>Detalle Oferta</h1>
+  </div>
+  <div class="contenidos">
+    <div class="individual">
+      <div class="individual_logo">
+        <img src="{{oferta.empresa.logo.url}}" />
+      </div>
+      <div class="datos">
+        <div class="empresa">
+          <h1>{{oferta.empresa.nombre}}</h1>
+        </div>
+        <div class="titulo">
+          <h1>{{oferta.titulo}}</h1>
+        </div>
+        <div class="horario">
+          <div class="horario_cuerpo">
+            <div class="icono">
+              <i class="bx bxs-alarm-add"></i>
+            </div>
+            <div class="horario_hr">
+              <h1>{{oferta.tipo.nombre}}</h1>
+            </div>
+          </div>
+        </div>
+        <div class="salario">
+          <div class="salario_titulo">
+            <h3>Salario:</h3>
+          </div>
+          <div class="salario_datos">
+            <h4>${{oferta.salario_minimo}} - ${{oferta.salario_maximo}}</h4>
+          </div>
+        </div>
+      </div>
+      <div class="datos2">
+        <div class="datos_datos2">
+          <div class="genero">
+            <h3>Sexo Solicitado: {{oferta.genero}}</h3>
+          </div>
+          <div class="categoria">
+            <h3>Categoria: {{oferta.categoria}}</h3>
+          </div>
+        </div>
+        <div class="datos2_descripcion">
+          <div class="descripcion_titulo">
+            <h2>Decripción</h2>
+          </div>
+          <div class="descripcion_datos">
+            <p>{{oferta.descripcion}}</p>
+          </div>
+        </div>
+      </div>
+      {% if r %}
+        {% if oferta.reclutador == user %}
+        <div class="lonks">
+          <div class="lonks_a" ><a href={% url 'eliminaOferta' oferta.id %} id="eliminar">Eliminar</a></div>
+          <div class="lonks_a" ><a href={% url 'modificaOfertaEmpleo' oferta.id %} id="modificar">Modifica</a></div>
+        </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% endblock contenido %}

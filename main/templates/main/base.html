@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opportunities Link</title>
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+        <link rel="stylesheet" href="{% static 'css/logged.css' %}">
+    <link rel="stylesheet" href="{% static 'boxicons/css/boxicons.min.css' %}" />
+    <script src="{% static 'js/navbar.js' %} "></script>
+    {% block title %}
+    {% endblock title %}
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="">Opportunities Link</a>
+        </div>
+        <ul class="menu">
+            <li><a href="/home">Home</a></li>
+            <li><a href="../trabajos/">Jobs</a></li>
+            <li><a href="../empresas/">Employer</a></li>
+            <li><a href="../postulantes/">Candidates</a></li>
+            <li><a href="../preguntas">Q/A</a></li>
+            <li><a href="../contact">Contact Us</a></li>
+        </ul>
+        </div>
+        {% if user.is_authenticated %}
+            <div class="logged">
+                <img src="{% static 'images/usuario_m.jpg' %}">
+                <i class='bx bxs-down-arrow' id="muestra_opc"></i>
+            <div>
+            <div class="lista_nivel visible" id="lista_nivel_div">
+                <p>Bienvenido {{user.username}}!</p>
+                <ul>
+                    <li><a href="../perfil/">Mi perfil</a></li>
+                    <li><a href="../passwordchange/">Cambia Contraseña</a></li>
+                    <li><a href="../mispostulaciones/">Mis Postulaciones</a></li>
+                    {% if a %}
+                    <li><a href="../cv/{{user.username}}">Editar/Crear CV</a></li>
+                    <li><a href="../empresas/">Dar de Baja Empresas</a></li>
+                    <li><a href="../empresas/">Modificar Empresas</a></li>
+                    <li><a href="../empresas">Consulta Empresas</a></li>         
+                    <li><a href="../agregarEmpresa/">Agregar Empresas</a></li>     
+                    <li><a href="../admin/">Gestionar Usuarios</a></li>
+                    <li><a href="../respaldo/">Generar Respaldo</a></li> 
+                    {% endif %}
+                    {% if s %}
+                    <li><a href="cv/{{user.username}}">Editar/Crear CV</a></li>
+                    {% endif %}
+                    {% if r  %}
+                    <li><a href="../cv/{{user.username}}">Editar/Crear CV</a></li>
+                    <li><a href="../ofertas/">Agregar Ofertas de Empleo</a></li>
+                    <li><a href="../trabajos/">Modificar Ofertas de Empleo</a></li>
+                    <li><a href="../trabajos/">Eliminar Ofertas de Empleo</a></li>
+                    <li><a href="../postulantes/">Consulta Solicitantes</a></li>
+                    <li><a href="../postulantes/">Evalua Solicitantes</a></li>
+                    {% endif %}
+                    {% block navbar %}
+                    
+                    {% endblock navbar %}
+                    <li class="a_loggout"><a href="/logout">Logout</a></li>
+                </ul>
+            </div>
+         {% else %}
+        <div class="permiso">
+            <div class="login">
+                <a href="/login"><i class='bx bxs-edit-alt'></i>Login/</a>
+            </div>
+            <div class="register">
+                <a href="/register">Register</a>
+            </div>
+        </div>
+        {% endif %}
+    </nav>
+        {% block contenido %}
+        <div class="container">
+        </div>
+        {% endblock contenido %}
+        <div class="footer">
+            <div class="footer-container">
+                <div class="footer-top">
+                    <div class="footer-logo">
+                        <a href=""><img src="{% static 'images/logo.png' %}" alt=""></a>
+                        <h3>OPPORTUNUTIES LINK</h3>
+                    </div>
+                    <div class="footer-datos">
+                        <div class="footer-datos-titulo">
+                            <h1>Datos</h1>
+                        </div>
+                        <h4>Autores:</h4>
+                        <h6>- Liceaga Rangel Noe de Jesus</h6>
+                        <h6>- Uriostegui Guillen Loren Adlai</h6>
+                        <h4>Docente:</h4>
+                        <h6>- Roxana Georgina Herrera Herrera</h6>
+                        <h6>- Programación Web 2</h6>
+                        <h6>Universidad Politecnica de San Luis Potosi</h6>
+                    </div>
+                    <div class="footer-links">
+                        <div class="footer-datos-titulo">
+                            <h1>Links</h1>
+                        </div>
+                        <ul>
+                            <li><a href="">- Home</a></li>
+                            <li><a href="">- Jobs</a></li>
+                            <li><a href="">- Employer</a></li>
+                            <li><a href="">- Candidates</a></li>
+                            <li><a href="">- Blog</a></li>
+                            <li><a href="">- Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <div class="footer-datos-titulo">
+                            <h1>Q&A</h1>
+                            <a href="">- Quienes Somos</a><br>
+                            <a href="">- Contact Us</a><br>
+                            <a href="">- Preguntas Frecuentes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <h6>© 2021 Universidad Politécnica de San Luis Potosi</h6>
+            </div>
+        </div>
+    </div>     
+    <script src="{% static 'js/loggin.js' %} "></script>
+</body>
+
+</html>

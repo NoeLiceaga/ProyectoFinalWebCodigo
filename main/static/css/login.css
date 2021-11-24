@@ -1,0 +1,113 @@
+
+:root{
+    --primary-color:#f09d02;
+    --secondary-color:#375e97;
+    --terceary-color:#f80657;
+    --font-primary-color: black;
+    --font-secondary-color: white;
+    --body-font: 'Poppins', sans-serif;
+    --background-color: #373a68 ;
+}
+body{
+    font-family: var(--body-font);
+}
+.containers{
+    margin-top: 150px !important;
+    height: 1000px !important;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    color: var(--font-primary-color);
+    justify-content: space-evenly;
+    align-items: center;
+}
+.avatar_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.avatar_container img{
+   width: 120px;
+   height: 120px;
+   border-radius: 50%;
+   padding-right: 5px;
+   background-color: white;
+}
+.avatar_container .avatar{
+    box-shadow: -1px 2px 36px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -1px 2px 36px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 2px 36px 0px rgba(0,0,0,0.75);
+}
+.avatar_container h1{
+    width: 100%;
+}
+.login-box {
+    display: flex;
+    flex-wrap: wrap;
+    background:white;
+    color: #fff;
+    width: 100%;
+    color: var(--font-primary-color);
+}
+ .login-box h1 {
+margin: 0;
+padding: 0 0 20px;
+text-align: center;
+font-size: 22px;
+}
+.login_form_a{
+    color: blue !important;
+}
+
+.contenedor{
+    height: 1200px !important;
+}
+/*
+.login-box label {
+margin: 0;
+padding: 0;
+font-weight: bold;
+display: block;
+}
+
+.login-box input {
+width: 100%;
+margin-bottom: 20px;
+}
+
+.login-box input[type="text"], .login-box input[type="password"] {
+border: none;
+border-bottom: 1px solid #fff;
+background: transparent;
+outline: none;
+height: 40px;
+font-size: 16px;
+}
+
+.login-box input[type="submit"] {
+border: none;
+outline: none;
+height: 40px;
+background: var(--primary-color);
+font-size: 18px;
+text-transform: uppercase;
+color: white;
+}
+
+.login-box input[type="submit"]:hover {
+cursor: pointer;
+background: var(--terceary-color);
+}
+
+.login-box a {
+text-decoration: none;
+font-size: 12px;
+line-height: 20px;
+color: darkgrey;
+}
+
+.login-box a:hover {
+color: #fff;
+} */

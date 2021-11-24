@@ -1,0 +1,75 @@
+{% extends 'main/base.html' %} {% load static %} {% block title %}
+<link rel="stylesheet" href="{% static 'css/preguntas.css' %}" />
+<link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+{% endblock title %} {% block contenido %}
+<div class="contenedor">
+  <div class="titulo_fondo">
+    <h1>Preguntas Y Respuestas</h1>
+  </div>
+  <div id="preguntasfrec">
+    <div class="img_logo">
+      <img src="{% static 'images/ol.jpg' %}" class="imgRedonda" />
+    </div>
+    <div id="titulo">PREGUNTAS FRECUENTES</div>
+
+    <div id="questions">¿Cómo funciona la Bolsa de Trabajo?</div>
+    <div id="answers">
+      La Bolsa de Trabajo va a tener un funcionamiento anual.
+    </div>
+
+    <div id="questions">
+      ¿Si me presente el año pasado estoy admitido en la Bolsa?
+    </div>
+    <div id="answers">Si, pero hay que actualizar la información</div>
+
+    <div id="questions">
+      Si ya estoy admitido en la Bolsa de Trabajo, ¿tengo presentar la vida
+      laboral si solo añado documentación?
+    </div>
+    <div id="answers">
+      Si en la documentación que añadas presentas contratos de trabajo, tienes
+      que adjuntar una vida laboral actualizada para que dichos contratos
+      aparezcan y se pueden baremar.
+    </div>
+
+    <div id="questions">
+      Si no he finalizado los estudios universitarios ¿se me pueden valorar?
+    </div>
+    <div id="answers">
+      No, debes tener finalizados los estudios universitarios.
+    </div>
+
+    <div id="questions">
+      ¿Hace falta presentar una vida laboral actualizada si no he trabajado
+      recientemente?
+    </div>
+    <div id="answers">
+      La Bolsa de Trabajo va a tener un funcionamiento anual. No, pero siempre
+      teniendo en cuenta que la vida laboral presentada refleje los contratos
+      que quieres que se te valoren.
+    </div>
+    <div id="questions">
+      ¿Puedo entregar en varios momentos dentro del plazo nueva documentación?
+    </div>
+    <div id="answers">Sí. Siempre que esté dentro del plazo marcado.</div>
+    <div id="questions">
+      ¿Se puede trabajar en dos puestos diferentes o con contratos diferentes si
+      no coinciden las fechas de contratación?
+    </div>
+    <div id="answers">
+      Se debe optar por uno de los dos, conservando su permanencia en la lista
+      de espera del puesto por el que no haya optado.
+    </div>
+
+    <div id="titulo">ACERCA DE NOSOTROS</div>
+    <div id="name">-Noe de Jesús Liceaga Rangel</div>
+    <div id="matri">175825</div>
+
+    <div id="name">-Loren Adlai Urióstegui Guillén</div>
+    <div id="matri">175497</div>
+
+    <div id="name">PROGRAMACIÓN WEB 2</div>
+    <div id="matri">UNIVERSIDAD POLITÉCNICA DE SAN LUIS POTOSÍ</div>
+  </div>
+</div>
+{% endblock contenido %}

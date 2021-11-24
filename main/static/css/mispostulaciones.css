@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,400;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,500;1,400;1,900&display=swap');
+:root{
+    --primary-color:#f09d02;
+    --secondary-color:#375e97;
+    --terceary-color:#f80657;
+    --font-primary-color: black;
+    --font-secondary-color: white;
+    --body-font: 'Poppins', sans-serif;
+    --background-color: #373a68 ;
+}
+.contenedor{
+    margin-top: 130px;
+    height: 1560px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-family: var(--body-font);
+    text-align: center;
+}
+
+.titulo_fondo{
+    width: 100%;
+    background-image: url('http://prograweb2upslp.online/bg-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 70% 0;
+    height: 150px;
+    display: flex;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    color:  var(--font-secondary-color);
+    font-family: var(--body-font);
+}
+.contenidos{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-items: center;
+    height: 60%;
+}
+.individual{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #d8d8d8 transparent;
+    background-color: #fff;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    padding: 0 20px;
+}
+.logo_empresa{
+    width: 25%;
+    padding: 20px 0;
+}
+.logo_empresa img{
+    width: 200px;
+    height: 200px;
+}
+.datos_user{
+    display: flex;
+    flex-wrap: wrap;
+    width: 25%;
+}
+.datos_propuesta{
+    width: 30%;
+}
+.datos_user_nombres,
+.postulante_cv{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.postulante_cv{
+    margin-top: 20px;
+}
+.postulante_cv a{
+    background-color: #31af36;
+    color: white;
+    width: 80%;
+    transition: all ease 0.6s;
+}
+.postulante_cv a:hover{
+    background-color: #31af36;
+    background-color: #3ccc41;
+    transform: scale(0.9);
+    transition: all ease 0.6s;
+}
+h3{
+    font-weight: 300;
+}
+.estados{
+    width: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.estados .lonks_a{
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    color: white !important;
+}
+
+.page_navigation{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.page_nav{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    background-color: white;
+    height: 100%;
+    width: 15%;
+    font-family: var(--body-font);
+    font-size: 30px;
+    background-color:#31af36;
+    color: white;
+}
+.page_nav a{
+    text-decoration: none;
+    color: var(--font-secondary-color);
+}
+
+#si{
+    background-color: #31af36 !important;
+}
+#no{
+    background-color: red !important;
+}
+#nose{
+    background-color: orange !important;
+}
